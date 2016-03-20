@@ -1,5 +1,23 @@
+// Base styles
+$padding: 1rem;
+$base-font-weight: 300;
+$accent-color: white;
+$desktop: 700px;
+
 body {
     margin: 0;
     padding: 0;
-    color: blue;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    font-weight: $base-font-weight;
 }
+
+// Layouts
+@import "layouts/equal-thirds";
+@import "layouts/tight";
+
+// Components
+@import "components/feature";
+@import "components/header";
+@import "components/icon";
+@import "components/sub-title";

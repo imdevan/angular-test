@@ -7,7 +7,32 @@
 
 	<link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
+<body ng-app="" ng-controller="MainController">
+    <!-- top nav -->
+    <header class="header"><img src="assets/icons/main-icon.png" alt="main icon" class="icon--MAIN"></header>
+    <!-- title -->
+    <section class="_tight">
+        <h3 class="sub-title">{{subTitle}}</h3>
+    </section>
+    <!-- main focus -->
+    <section>
+        <figure></figure>
+    </section>
+    <!-- bottom section -->
+    <section>
+        <hgroup class="_tight">Look what we found</hgroup>
+
+        <div class="_equal-thirds">
+            <figure class="feature" ng-repeat="feature in featured.list"
+                ng-style="{'background-image':'url(../assets/images/{{feature.image}})'}">
+                {{feature.title}}
+            </figure>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+
 	<div ng-controller="MainController">
 		<h1>{{ message }}</h1>
 	</div>

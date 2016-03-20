@@ -56,7 +56,7 @@ gulp.task('html:watch', function () {
     gulp.watch('app/**/*.html', ['html']);
 });
 
-// SASS
+// SCSS
 gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -68,6 +68,13 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
     gulp.watch('app/scss/**/*.scss', ['sass']);
 });
+
+// ASSETS
+gulp.task('assets', function() {
+    gulp.src('app/assets/**/*.*')
+    .pipe(gulp.dest('public/assets/'))
+    .pipe(browserSync.stream());
+})
 
 // Watch
 gulp.task('watch', function() {
@@ -83,7 +90,7 @@ gulp.task('lint', function () {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('build', ['html', 'sass', 'scripts', 'watch']);
+gulp.task('build', ['html', 'sass', 'scripts', 'watch', 'assets']);
 
 gulp.task('watch', ['scripts:watch', 'html:watch', 'sass:watch']);
 

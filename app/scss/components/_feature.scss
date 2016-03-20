@@ -1,0 +1,12 @@
+.feature {
+    display: inline-block;
+    background-size: cover;
+    color: $accent-color;
+    min-height: 15rem;
+    width: 100%;
+    margin: auto;  /* Magic! */
+
+    @media (min-width: $desktop) {
+        width: calc(100% / 3);
+    }
+}

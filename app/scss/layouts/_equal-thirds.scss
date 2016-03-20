@@ -1,0 +1,9 @@
+.equal-thirds {
+    display: flex;
+    align-content: center;
+
+    @media (min-width: $desktop) {
+        justify-content: space-around;
+        flex-flow: row;
+    }
+}

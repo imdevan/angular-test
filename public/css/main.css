@@ -1,4 +1,55 @@
 body {
   margin: 0;
   padding: 0;
-  color: blue; }
+  color: #444;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
+.equal-thirds {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+  @media (min-width: 700px) {
+    .equal-thirds {
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      -webkit-flex-flow: row;
+          -ms-flex-flow: row;
+              flex-flow: row; } }
+
+._tight {
+  margin: auto;
+  max-width: 500px; }
+
+.feature {
+  display: inline-block;
+  background-size: cover;
+  color: white;
+  min-height: 15rem;
+  width: 100%;
+  margin: auto;
+  /* Magic! */ }
+  @media (min-width: 700px) {
+    .feature {
+      width: calc(100% / 3); } }
+
+.header {
+  display: block;
+  width: 100%;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  box-sizing: border-box; }
+
+.icon--MAIN {
+  width: 32px;
+  height: 32px; }
+
+.sub-title {
+  font-weight: 300;
+  padding: 3rem 0;
+  text-align: center; }
