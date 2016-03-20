@@ -1,0 +1,31 @@
+{
+  "name": "angular_webpage",
+  "version": "1.0.0",
+  "description": "Basic one page anuglar webpage example",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Devan Huapaya <huapayadevan@gmail.com> (http://imdevan.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gutil": "^1.6.4",
+    "postcss-flexibility": "^1.0.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.3.15"
+  }
+}
