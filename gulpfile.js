@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     flexibility = require('postcss-flexibility'),
     uglify = require('gulp-uglify'),
     gutil = require('gutil'),
+    ghPages = require('gulp-gh-pages'),
     sourcemaps = require('gulp-sourcemaps');
 
 // Run server
@@ -59,9 +60,8 @@ gulp.task('html:watch', function () {
 // SCSS
 gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(postcss([flexibility ]))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(postcss([autoprefixer, flexibility ]))
     .pipe(gulp.dest('public/css'))
     .pipe(browserSync.stream());
 });
@@ -94,7 +94,7 @@ gulp.task('lint', function () {
 // Deploy! ✨
 gulp.task('deploy', function() {
   return gulp.src('./public/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages([{force: true}]));
 });
 
 gulp.task('build', ['html', 'sass', 'scripts', 'watch', 'assets']);
