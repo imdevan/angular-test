@@ -1,0 +1,23 @@
+.main-focus     {
+    background: $negative-space-color;
+    width: 100%;
+    position: relative;
+
+    &--image {
+        min-height: $lg;
+        max-width: $lg;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+    }
+
+    &--calltoaction {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        width: $icon-size-lg;
+        height: $icon-size-lg;
+    }
+}

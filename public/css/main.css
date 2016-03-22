@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   color: #444;
+  font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 300; }
 
@@ -9,6 +10,7 @@ body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
+  -js-display: flex;
   display: flex;
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
@@ -24,7 +26,50 @@ body {
 
 ._tight {
   margin: auto;
-  max-width: 500px; }
+  max-width: 762px;
+  font-size: 0.95em;
+  line-height: 2; }
+
+._tight-fourths {
+  background: #448BFF;
+  text-align: center;
+  padding: 1rem; }
+  ._tight-fourths--body {
+    max-width: 500px;
+    min-width: 300px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    padding: 1rem; }
+
+.main-focus {
+  background: #111;
+  width: 100%;
+  position: relative; }
+  .main-focus--image {
+    min-height: 500px;
+    max-width: 500px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    margin: auto; }
+  .main-focus--calltoaction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 64px;
+    height: 64px; }
 
 .feature {
   display: inline-block;
@@ -45,7 +90,22 @@ body {
   padding: 1rem;
   box-sizing: border-box; }
 
-.icon--MAIN {
+.heading, .heading--slim {
+  text-align: center;
+  padding: 5rem; }
+  .heading--image, .heading--slim--image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 2rem; }
+  .heading--subtitle {
+    font-weight: 300;
+    color: #555; }
+  .heading--slim {
+    padding: 1rem; }
+    .heading--slim--image {
+      margin-bottom: 0; }
+
+.icon {
   width: 32px;
   height: 32px; }
 

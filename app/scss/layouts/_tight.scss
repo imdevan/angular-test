@@ -1,6 +1,8 @@
-$tight-width: 500px;
+$tight-width: 762px;
 
 ._tight {
     margin: auto;
     max-width: $tight-width;
+    font-size: 0.95em;
+    line-height: 2;
 }

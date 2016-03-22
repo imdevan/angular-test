@@ -61,6 +61,7 @@ gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
+    .pipe(postcss([flexibility ]))
     .pipe(gulp.dest('public/css'))
     .pipe(browserSync.stream());
 });
@@ -88,6 +89,12 @@ gulp.task('lint', function () {
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
+});
+
+// Deploy! ✨
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('build', ['html', 'sass', 'scripts', 'watch', 'assets']);

@@ -1,8 +1,5 @@
-$icon-size: 24px;
-$icon-size-lg: 32px;
+
 .icon {
-    &--MAIN {
-        width: $icon-size-lg;
-        height: $icon-size-lg;
-    }
+    width: $icon-size;
+    height: $icon-size;
 }

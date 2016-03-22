@@ -2,36 +2,58 @@
 <html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<title>My App</title>
+	<title>MST3K</title>
 	<script src="/js/main.js"></script>
-
 	<link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body ng-app="" ng-controller="MainController">
     <!-- top nav -->
-    <header class="header"><img src="assets/icons/main-icon.png" alt="main icon" class="icon--MAIN"></header>
+    <header class="header">
+        <img src="assets/icons/main-icon.png" alt="main icon" class="icon">
+    </header>
     <!-- title -->
     <section class="_tight">
-        <h3 class="sub-title">{{subTitle}}</h3>
+        <div class="heading">
+            <img class="heading--image" src="{{titleImage}}" alt="">
+            <h3 class="heading--subtitle" class="sub-title">{{subTitle}}</h3>
+        </div>
     </section>
     <!-- main focus -->
-    <section>
-        <figure></figure>
+    <section class="main-focus">
+        <figure class="main-focus--image"
+            ng-style="{'background-image':'url({{mainFocus.image}})'}"></figure>
+        <img class="main-focus--calltoaction"
+            src="{{mainFocus.callToAction}}" alt="">
     </section>
     <!-- bottom section -->
     <section>
-        <hgroup class="_tight">Look what we found</hgroup>
+        <hgroup class="_tight heading--slim">
+            <img class="heading--slim--image" src="{{featureTitleImage}}" alt="">
+        </hgroup>
 
         <div class="_equal-thirds">
             <figure class="feature" ng-repeat="feature in featured.list"
-                ng-style="{'background-image':'url(../assets/images/{{feature.image}})'}">
+                ng-style="{'background-image':'url({{feature.image}})'}">
                 {{feature.title}}
             </figure>
         </div>
     </section>
 
+    <!-- social section -->
+    <section class="_tight-fourths">
+        <div class="_tight-fourths--body">
+
+            <a class="social-icon" href={{social.link}}
+                ng-repeat="social in socialLinks">
+                <img class="icon" src="{{social.icon}}" alt="">
+            </a>
+        </div>
+    </section>
+
     <!-- footer -->
-    <footer></footer>
+    <footer>
+    </footer>
 
 	<div ng-controller="MainController">
 		<h1>{{ message }}</h1>

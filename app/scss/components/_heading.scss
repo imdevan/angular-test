@@ -1,0 +1,25 @@
+.heading {
+    text-align: center;
+    padding: $padding--XL;
+
+    &--image {
+        width: $md;
+        height: auto;
+        margin-bottom: $margin;
+    }
+
+    &--subtitle {
+        font-weight: 300;
+        color: $light-text;
+    }
+
+    &--slim {
+        @extend .heading;
+        padding: $padding;
+
+        &--image {
+            @extend .heading--image;
+            margin-bottom: 0;
+        }
+    }
+}

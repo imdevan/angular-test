@@ -1,23 +1,43 @@
 // Base styles
 $padding: 1rem;
+$padding--XL: 5rem;
+$margin: 2rem;
 $base-font-weight: 300;
 $accent-color: white;
+$negative-space-color: #111;
+$light-text: #555;
+$tablet: 500px;
 $desktop: 700px;
+$accent-background: #448BFF;
+$icon-size: 32px;
+$icon-size-lg: 64px;
+$md: 300px;
+$lg: 500px;
 
 body {
     margin: 0;
     padding: 0;
     color: #444;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     font-weight: $base-font-weight;
+}
+
+@mixin square($var) {
+    width: $var;
+    max-width: $var;
+    height: $var;
 }
 
 // Layouts
 @import "layouts/equal-thirds";
 @import "layouts/tight";
+@import "layouts/tight-fourths";
 
 // Components
+@import "components/main-focus";
 @import "components/feature";
 @import "components/header";
+@import "components/heading";
 @import "components/icon";
 @import "components/sub-title";

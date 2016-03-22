@@ -4,7 +4,8 @@
   "description": "Basic one page anuglar webpage example",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "test": "gulp lint"
   },
   "author": "Devan Huapaya <huapayadevan@gmail.com> (http://imdevan.com)",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-connect": "^2.2.0",
     "gulp-eslint": "^2.0.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-postcss": "^6.1.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",

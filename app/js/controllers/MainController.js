@@ -1,4 +1,15 @@
 module.exports = function($scope) {
+    var imgDir = "assets/images/",
+        imgParentDir = "../assets/images/";
+
+    $scope.mainFocus = {
+        image: imgDir + "main-focus-bg.png",
+        callToAction: "assets/icons/play-icon.png"
+    };
+
+    $scope.titleImage = imgDir + "page-title.png";
+    $scope.featureTitleImage = imgDir + "feature-title-image.png";
+
     $scope.subTitle = "In the not-too-distant future, next Sunday, \
         AD There was a man. There were some puppets. It was amazing \
         These are the experiments of the SOL";
@@ -8,24 +19,24 @@ module.exports = function($scope) {
         list: [
             {
                 title: "Season 0 \nKTMA",
-                image: "exhibit-1.jpg"
+                image: imgParentDir + "exhibit-1.jpg"
             },
             {
                 title: "Comedy Central The Golden Years",
-                image: "exhibit-2.jpg"
+                image: imgParentDir + "exhibit-2.jpg"
             },
             {
                 title: "Sci-Fi, Crow's Voice, & Ran Chips",
-                image: "exhibit-3.jpg"
+                image: imgParentDir + "exhibit-3.jpg"
             }
         ]
     };
 
-    $scope.social = [
-        {icon: "facebook", link: "link"},
-        {icon: "twitter", link: "link"},
-        {icon: "google+", link: "link"},
-        {icon: "pintrest", link: "link"}
+    $scope.socialLinks = [
+        {icon: "assets/icons/facebook.svg", link: "https://www.facebook.com"},
+        {icon: "assets/icons/twitter.svg", link: "https://twitter.com"},
+        {icon: "assets/icons/google-plus.svg", link: "https://plus.google.com"},
+        {icon: "assets/icons/pinterest.svg", link: "https://www.pinterest.com"}
     ];
 
     $scope.info = [

@@ -1,0 +1,15 @@
+._tight-fourths{
+    background: $accent-background;
+    text-align: center;
+    padding: $padding;
+
+    &--body {
+        max-width: $lg;
+        min-width: $md;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        margin:auto;
+        padding: $padding;
+    }
+}
