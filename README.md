@@ -1,5 +1,11 @@
 # Basic one page angular webpage example
 
+## To Run
+```
+npm install &&
+npm start
+```
+
 ## Requirements
 Responsive design - should look good on mobile, tablet, and desktop. Note: unfortunately, the designer has left out the tablet comp. Despite this, it’s up to you to make sure the page looks and functions great on tablet devices.
 
@@ -14,28 +20,25 @@ SCSS
 
 ## Completed
 - Responsive design - using SCSS media queries
-- Browser support - used autoprefixer
+- Browser support - used gulp-postscss
 - Embedded, responsive youtube video - added
 - Three separate modal videos - written to be used as multiple,
 unfortunately, there was an issue with whitelisting the youtube url, but I would
 use a method similar to this in production
-
-- AngularJS - yep
-- SCSS - yep
+- AngularJS - used
+- SCSS - used
 - ToolChain - gulp
 - Backend - none
 
-## Technologies used
-- gulp
-- browserify
-- gulp-sass
-- gulp-eslint
-- gulp-connect
-- browserify
+## Technologies Used
+- AngularJS
+- SCSS
+- Gulp
+- Browserify
+- eslint
 - postcss
 - autoprefixer
 - flexibility
 - uglify
 - sourcemaps
-- eslint
 - gh-pages - attempted but couldn't resolve issues in time
