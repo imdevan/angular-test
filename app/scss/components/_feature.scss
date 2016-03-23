@@ -7,8 +7,41 @@
     margin: auto;  /* Magic! */
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to top right,$negative-space-color,transparent);
+        opacity: .6;
+    }
 
     @media (min-width: $desktop) {
         width: calc(100% / 3);
+    }
+
+    &--text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: $margin;
+    }
+
+    &--title {
+        font-size: $text-md;
+        font-weight: lighter;
+        margin-bottom: .5*$margin;
+    }
+
+    &--cta {
+        font-family: $base-font;
+        font-weight: $font-weight-heavey;
+        font-size: $text-sm;
+        color: $text-accent;
     }
 }

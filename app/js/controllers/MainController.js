@@ -3,8 +3,24 @@ module.exports = function($scope) {
         imgParentDir = "../assets/images/";
 
     $scope.footer = {
-        left: ["Help", "Privacy & Terms", "English"],
-        right: ["follow us on", "g+", "B", "t", "yt"]
+        left: [ {
+            link:"http://rga.com",
+            text: "Help" },  {
+            link:"http://rga.com",
+            text: "Privacy & Terms" },  {
+            link:"http://rga.com",
+            text: "English" }],
+        right: [ {
+            link:"http://rga.com",
+            text: "follow us on" },  {
+            link:"http://rga.com",
+            text: "g+" },  {
+            link:"http://rga.com",
+            text: "B" },{
+            link:"http://rga.com",
+            text: "t" },{
+            link:"http://rga.com",
+            text: "yt" }],
     };
 
     $scope.mainFocus = {

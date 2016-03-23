@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MST3K</title>
-	<script src="/js/main.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/main.css">
+    <title>MST3K</title>
+    <script src="/js/main.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body ng-app="" ng-controller="MainController">
@@ -14,6 +14,7 @@
     <header class="header">
         <img src="assets/icons/main-icon.png" alt="main icon" class="icon">
     </header>
+
     <!-- title -->
     <section class="_tight">
         <div class="heading">
@@ -21,6 +22,7 @@
             <h3 class="heading--subtitle" class="sub-title">{{subTitle}}</h3>
         </div>
     </section>
+
     <!-- main focus -->
     <section class="main-focus">
         <figure class="main-focus--image"
@@ -28,16 +30,19 @@
         <img class="main-focus--calltoaction"
             src="{{mainFocus.callToAction}}" alt="">
     </section>
-    <!-- bottom section -->
+
+    <!-- feature section -->
     <section>
         <hgroup class="_tight heading--slim">
             <img class="heading--slim--image" src="{{featureTitleImage}}" alt="">
         </hgroup>
-
         <div class="_equal-thirds">
             <figure class="feature" ng-repeat="feature in featured.list"
                 ng-style="{'background-image':'url({{feature.image}})'}">
-                {{feature.title}}
+                <div class="feature--text">
+                    <h3 class="feature--title">{{feature.title}}</h3>
+                    <span class="feature--cta">EXPLORE</span>
+                </div>
             </figure>
         </div>
     </section>
@@ -45,7 +50,6 @@
     <!-- social section -->
     <section class="_tight-fourths">
         <div class="_tight-fourths--body">
-
             <a class="social-icon" href={{social.link}}
                 ng-repeat="social in socialLinks">
                 <img class="icon" src="{{social.icon}}" alt="">
@@ -57,12 +61,12 @@
     <footer class="footer">
         <ul class="inline-list--left">
             <li class="inline-list--item" ng-repeat="footerItem in footer.left">
-                <a class="link--footer">{{footerItem}}</a>
+                <a href="{{footerItem.link}}" class="link--footer">{{footerItem.text}}</a>
             </li>
         </ul>
         <ul class="inline-list--right">
             <li class="inline-list--item" ng-repeat="footerItem in footer.right">
-                <a class="link--footer">{{footerItem}}</a>
+                <a href="{{footerItem.link}}" class="link--footer">{{footerItem.text}}</a>
             </li>
         </ul>
     </footer>

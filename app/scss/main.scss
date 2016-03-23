@@ -6,21 +6,29 @@ $base-font-weight: 300;
 $accent-color: white;
 $negative-space-color: #111;
 $light-text: #555;
+$base-text: #444;
 $tablet: 500px;
 $desktop: 700px;
 $accent-background: #448BFF;
+$text-accent: $accent-background;
 $icon-size: 32px;
 $icon-size-lg: 64px;
 $md: 300px;
 $lg: 500px;
+$base-font: 'Roboto', sans-serif;
+$font-weight-base: 300;
+$font-weight-heavey: 400;
+$text-md: 2rem;
+$text-sm: 1rem;
 
 body {
     margin: 0;
     padding: 0;
-    color: #444;
+    color: $base-text;
     font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: $base-font-weight;
+    font-family: $base-font;
+    font-weight: $font-weight-base;
+    font-weight: 300;
 }
 
 @mixin square($var) {
@@ -42,4 +50,5 @@ body {
 @import "components/icon";
 @import "components/sub-title";
 @import "components/footer";
+@import "components/link";
 @import "components/inline-list";
