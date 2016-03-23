@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MST3K</title>
     <script src="/js/main.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700,400,300,100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -25,10 +25,14 @@
 
     <!-- main focus -->
     <section class="main-focus">
+        <iframe class="main-focus--image" src="https://www.youtube.com/embed/x5Ca2wVaU_4" frameborder="0" allowfullscreen></iframe>
+        <!-- 
         <figure class="main-focus--image"
-            ng-style="{'background-image':'url({{mainFocus.image}})'}"></figure>
+            ng-style="{'background-image':'url({{mainFocus.image}})'}">
+            </figure>
         <img class="main-focus--calltoaction"
-            src="{{mainFocus.callToAction}}" alt="">
+            src="{{mainFocus.callToAction}}" alt=""> -->
+
     </section>
 
     <!-- feature section -->
@@ -37,7 +41,7 @@
             <img class="heading--slim--image" src="{{featureTitleImage}}" alt="">
         </hgroup>
         <div class="_equal-thirds">
-            <figure class="feature" ng-repeat="feature in featured.list"
+            <figure class="feature" ng-click="playVideo()" ng-repeat="feature in featured.list"
                 ng-style="{'background-image':'url({{feature.image}})'}">
                 <div class="feature--text">
                     <h3 class="feature--title">{{feature.title}}</h3>
@@ -50,7 +54,7 @@
     <!-- social section -->
     <section class="_tight-fourths">
         <div class="_tight-fourths--body">
-            <a class="social-icon" href={{social.link}}
+            <a class="social-icon" href={{social.link}} target="_blank"
                 ng-repeat="social in socialLinks">
                 <img class="icon" src="{{social.icon}}" alt="">
             </a>
@@ -72,6 +76,12 @@
     </footer>
 
     <!-- video container -->
-    <div class="video--container"></div>
+    <div ng-repeat="video in currentVideo"class="video--popup"  ng-click="stopVideo()" >
+        <div class="video--window" ng-click="stopProp()">
+            <!-- hard coded due to not being able to get .config(function($sceDelegateProvider)) to function -->
+            <iframe width="420" height="315" ng-src="https://www.youtube.com/embed/WspeHC7eoOI" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+    </div>
 </body>
 </html>

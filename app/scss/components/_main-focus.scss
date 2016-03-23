@@ -3,11 +3,12 @@
     width: 100%;
     position: relative;
     cursor: pointer;
-    
+
 
     &--image {
         min-height: $lg;
-        max-width: $lg;
+        width: 100%;
+        max-width: $xl;
         display: block;
         background-size: cover;
         background-position: center;

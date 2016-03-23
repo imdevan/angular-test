@@ -6,7 +6,7 @@
     &--body {
         max-width: $lg;
         min-width: $md;
-        display: inline-flex;
+        display: flex;
         justify-content: space-around;
         align-items: center;
         margin:auto;

@@ -1,12 +1,32 @@
 .video {
-    &--container {
+    &--popup {
         position: fixed;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: top;
         background-image: linear-gradient(to top right,$negative-space-color,rgba($negative-space-color,0.5));
+        cursor: url('../assets/icons/close.svg') 30 30, pointer;
+
+        @media(min-width: $lg) {
+            align-items: center;
+        }
     }
-    &--window {}
+
+    &--window {
+        box-shadow: 0 0 30px rgba($negative-space-color, 0.6);
+        cursor: pointer;
+        display: block;
+
+        @media(min-width: $lg) {
+            align-items: center;
+        }
+
+        iframe {
+            margin-bottom: -5px;
+        }
+    }
 }

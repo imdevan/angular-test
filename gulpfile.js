@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     eslint = require('gulp-eslint'),
     connect = require('gulp-connect'),
-    browserSync = require('browser-sync'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
@@ -49,8 +48,7 @@ gulp.task('scripts:watch', function () {
 // HTML
 gulp.task('html', function() {
     gulp.src('app/**/*.html')
-    .pipe(gulp.dest('public/'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('public/'));
 })
 
 gulp.task('html:watch', function () {
@@ -61,9 +59,8 @@ gulp.task('html:watch', function () {
 gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(postcss([autoprefixer, flexibility ]))
-    .pipe(gulp.dest('public/css'))
-    .pipe(browserSync.stream());
+    .pipe(postcss([autoprefixer, flexibility]))
+    .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('sass:watch', function () {
@@ -73,8 +70,7 @@ gulp.task('sass:watch', function () {
 // ASSETS
 gulp.task('assets', function() {
     gulp.src('app/assets/**/*.*')
-    .pipe(gulp.dest('public/assets/'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('public/assets/'));
 })
 
 // Watch
