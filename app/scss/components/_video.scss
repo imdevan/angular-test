@@ -1,0 +1,12 @@
+.video {
+    &--container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        background-image: linear-gradient(to top right,$negative-space-color,rgba($negative-space-color,0.5));
+    }
+    &--window {}
+}
