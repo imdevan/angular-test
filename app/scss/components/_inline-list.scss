@@ -1,0 +1,23 @@
+.inline-list {
+    // display: inline-block;
+    list-style: none;
+    width: 100%;
+    display: block;
+
+    @media(min-width: 900px) {
+        width: 50%;
+        display: inline-block;
+    }
+    &--left {
+        @extend .inline-list;
+    }
+
+    &--right {
+        @extend .inline-list;
+    }
+
+    &--item {
+        display: inline-block;
+        margin: auto $margin;
+    }
+}

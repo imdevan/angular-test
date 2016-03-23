@@ -55,8 +55,16 @@
 
     <!-- footer -->
     <footer class="footer">
-        <span class="footer--item">footer item 1</span>
-        <span class="footer--item">footer item 2</span>
+        <ul class="inline-list--left">
+            <li class="inline-list--item" ng-repeat="footerItem in footer.left">
+                <a class="link--footer">{{footerItem}}</a>
+            </li>
+        </ul>
+        <ul class="inline-list--right">
+            <li class="inline-list--item" ng-repeat="footerItem in footer.right">
+                <a class="link--footer">{{footerItem}}</a>
+            </li>
+        </ul>
     </footer>
 </body>
 </html>

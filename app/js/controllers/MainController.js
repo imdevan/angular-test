@@ -2,6 +2,11 @@ module.exports = function($scope) {
     var imgDir = "assets/images/",
         imgParentDir = "../assets/images/";
 
+    $scope.footer = {
+        left: ["Help", "Privacy & Terms", "English"],
+        right: ["follow us on", "g+", "B", "t", "yt"]
+    };
+
     $scope.mainFocus = {
         image: imgDir + "main-focus-bg.png",
         callToAction: "assets/icons/play-icon.png"
